@@ -1,0 +1,187 @@
+
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+/* import des polices utilisées*/
+
+body {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 300;
+  background: rgb(249, 249, 249);
+  padding-top: 5em;
+  text-align: center;
+}
+
+
+p{
+    /* réglage mobile et + */
+    font-family:sans-serif;
+    font-size:16px;
+    text-align: center;
+    color: rgb(26, 1, 77);
+
+  }
+  @media screen and (min-width:640px){
+    p{
+     /* réglage à partir de 640px et + : corps un peu plus grand et même typo */
+      font-size:29px;
+    }
+  }
+  .tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            background-color: lightblue;
+  }
+
+  @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  .animate-charcter
+  {
+     text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
+    display: inline-block;
+        font-size: 50px;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  #carouselExampleIndicators {
+    margin: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .boite7{
+    animation:slideLeft 2s;
+    text-align: center;
+    text-decoration: underline;
+    border-style: solid;
+    border-color: rgb(161, 192, 209);
+}
+@keyframes slideLeft{
+    from{
+        transform: translate(50%);
+        background: rgb(110, 223, 223);
+    }
+    to{
+        transform: translate(0)
+    }
+}
+
+.button {
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 16px 16px;
+    cursor: pointer;
+
+  }
+
+  .img-fluid {
+    text-align:center;
+    
+  }
+  
+  .button1 {background-color: #4CAF50;}
+  .button2 {background-color: #008CBA;}
+/* distinction des deux boutons en bas de page dans le footer*/
+
+  .typewriter h1 { /* animation permettant d'écrire un titre (un texte) en temps réel avec la page*/
+    color: rgb(26, 1, 77);
+    font-family: monospace;
+    overflow: hidden; /* cache le contenu avant le déroulement de l'animation */
+    border-right: .15em solid green; /* le curseur */
+    white-space: nowrap; /* garde le texte sur une même ligne */
+    margin: 0 auto; 
+    letter-spacing: .15em; /* espace entre lettres */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+      text-align: center;
+  }
+  
+  /* animation avec keyframes*/
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  
+  /* effet du curseur qui clignote */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(26, 1, 77) }
+  }
+
+  .center { /*permet de centrer des images, des paragraphes etc. permettant de garder la forme du contenu tant en mobile que sur desktop*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .site-footer{
+    background-color: rgb(57, 57, 57);
+  }
+
+  .shadow { /* effet d'ombre permettant l'illusion de 3D sur certains titres*/
+    color: white; 
+    font: bold 52px Helvetica, Arial, Sans-Serif;
+    text-shadow: 1px 1px darkblue, 
+                 2px 2px darkblue, 
+                 3px 3px darkblue;
+
+ }
+ .shadow:hover { /* activation de l'effet précedant en passant la souris sur le texte */
+    position: relative; 
+    top: -3px; 
+    left: -3px; 
+    text-shadow: 1px 1px #fe4902, 
+                 2px 2px #fe4902, 
+                 3px 3px #fe4902, 
+                 4px 4px #fe4902, 
+                 5px 5px #fe4902, 
+                 6px 6px #fe4902;
+ }
